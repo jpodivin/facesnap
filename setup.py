@@ -1,7 +1,14 @@
 import setuptools
+import os
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
+
+PIC_DIR = os.path.expanduser('~/facesnaps')
+
+def _ensure_pic_path():
+  if not os.path.exists(PIC_DIR):
+    os.mkdir(PIC_DIR)
 
 setuptools.setup(
     name="facesnap",
@@ -26,3 +33,5 @@ setuptools.setup(
         "PyGObject"
     ]
 )
+
+_ensure_pic_path()
