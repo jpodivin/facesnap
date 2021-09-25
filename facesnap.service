@@ -1,0 +1,12 @@
+[Unit]
+Description=Record image after lid open
+After=multi-user.target paths.target
+
+[Service]
+Type=simple
+ExecStart=facesnap.py
+RestartSec=3min
+Restart=onfailure
+
+[Install]
+WantedBy=multi-user.target
