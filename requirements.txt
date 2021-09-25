@@ -1,0 +1,4 @@
+opencv-python
+pydbus
+gobject
+PyGObject
