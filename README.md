@@ -1,2 +1,44 @@
 # facesnap
-Open lid, take a pick
+## Open lid, take a pick
+
+Ever wondered if anyone was touching your laptop while you were away?
+If you are like me, you did, and you have probably rigged some sort script
+to make sure you know who it was. 
+
+I've recreated the one I used to run in python and turned it into a proper service.
+Once installed and running, the facesnap will take 3 pictures,
+whenever someone opens a lid of your laptop and store them in the `~/facesnaps` directory.
+
+The delay is set to 1 sec, to increase likelyhood that camera is facing the persons
+face, and not something else. 
+
+## Installation
+
+In order to get install up and running as service for the root user you need to install the script itself and the unit file to register it with systemd.
+Either with sudo, which is easier, but not recommended on the security grounds.
+
+```
+sudo pip install .
+sudo ./installservice.sh
+```
+
+Or as a normal user, which will require couple of tweeks to the `facesnap.service` file. 
+
+For one the `ExecStart` key must be set to place where you have installed the facesnap.py script. You should also add `User` and `Group` keys.
+
+No matter the method, you will need to reload the units and start the service for the changes to take effect.
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable facesnap.service
+sudo systemctl start facesnap.service
+```
+
+## Adjust the behavior
+
+I would encourage you to survey the script before installation, but I'm sure you are doing it already. 
+
+So I'll instead suggest that you should consider if the settings are to your liking. For example you might want the images to be stored elswhere, or for them to be taken after shorter delay.
+
+If you are fancy, you can insert a face reckognition algorithm to discern your own face, from the faces of others.
+The opencv is already in requirements, and not just because of the friendly API. 
