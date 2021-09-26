@@ -29,6 +29,7 @@ setuptools.setup(
     install_requires=[
         "pydbus",
         "opencv-python",
+        "pycairo",
         "gobject",
         "PyGObject"
     ]
