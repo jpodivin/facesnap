@@ -2,6 +2,7 @@
 ## Open lid, take a pick
 
 ![build](https://github.com/jpodivin/facesnap/actions/workflows/main.yml/badge.svg)
+![pep8](https://github.com/jpodivin/facesnap/actions/workflows/flake8.yml/badge.svg)
 
 Ever wondered if anyone was touching your laptop while you were away?
 If you are like me, you did, and you have probably rigged some sort script
