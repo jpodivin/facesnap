@@ -6,9 +6,11 @@ with open("README.md", "r") as fh:
 
 PIC_DIR = os.path.expanduser('~/facesnaps')
 
+
 def _ensure_pic_path():
-  if not os.path.exists(PIC_DIR):
-    os.mkdir(PIC_DIR)
+    if not os.path.exists(PIC_DIR):
+        os.mkdir(PIC_DIR)
+
 
 setuptools.setup(
     name="facesnap",
