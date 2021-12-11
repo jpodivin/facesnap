@@ -1,6 +1,6 @@
 # facesnap: Open lid, take a pick
 
-![facesnap logo](https://raw.githubusercontent.com/jpodivin/facesnap/master/logo.svg)
+![facesnap logo](https://raw.githubusercontent.com/jpodivin/facesnap/master/logo.png)
 
 ![build](https://github.com/jpodivin/facesnap/actions/workflows/main.yml/badge.svg)
 ![pep8](https://github.com/jpodivin/facesnap/actions/workflows/flake8.yml/badge.svg)
