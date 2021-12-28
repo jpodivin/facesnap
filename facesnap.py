@@ -8,7 +8,7 @@ import time
 
 
 def take_pic():
-    """Take a pictiure with default camera and store it.
+    """Take a picture with default camera and store it.
     """
     camera = cv2.VideoCapture(0)
     for _ in range(3):  # snap 3 times in a row
