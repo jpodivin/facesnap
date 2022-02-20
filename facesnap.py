@@ -1,4 +1,4 @@
-#! /bin/python
+#! /bin/python3
 
 import pydbus
 from gi.repository import GLib
