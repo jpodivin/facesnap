@@ -6,7 +6,9 @@ After=multi-user.target paths.target
 Type=simple
 ExecStart=facesnap.py
 RestartSec=3min
-Restart=onfailure
+Restart=on-failure
+User=root
+SupplementaryGroups=video
 
 [Install]
 WantedBy=multi-user.target
