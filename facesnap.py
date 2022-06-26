@@ -1,11 +1,13 @@
 #! /bin/python3
 
 import pydbus
-from gi.repository import GLib
+from gi.repository import GLib, Notify
 import cv2
 import os
 import time
 
+def notify_user():
+    pass
 
 def take_pic():
     """Take a picture with default camera and store it.
